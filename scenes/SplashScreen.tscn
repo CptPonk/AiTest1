@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://d2xrq8wokdpkb"]
+
+[ext_resource type="Script" uid="uid://lmbbt1w8q4ae" path="res://scripts/screens/SplashScreen.gd" id="1_abc12"]
+
+[node name="SplashScreen" type="Control" unique_id=57919410]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_abc12")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=100638260]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer" unique_id=113605908]
+anchors_fill_parent = true
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="PeakLeft" type="ColorRect" parent="CanvasLayer" unique_id=213605908]
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.3
+anchor_bottom = 1.0
+color = Color(0.3, 0.25, 0.2, 1)
+
+[node name="PeakRight" type="ColorRect" parent="CanvasLayer" unique_id=313605908]
+anchor_left = 0.7
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.3, 0.25, 0.2, 1)
+
+[node name="SunGlow" type="ColorRect" parent="CanvasLayer" unique_id=413605908]
+anchor_left = 0.35
+anchor_top = 0.1
+anchor_right = 0.65
+anchor_bottom = 0.4
+color = Color(1.0, 0.7, 0.3, 0.15)
+
+[node name="SkyGradient" type="ColorRect" parent="CanvasLayer" unique_id=513605908]
+anchors_fill_parent = true
+color = Color(0.15, 0.2, 0.35, 1)
+
+[node name="LogoContainer" type="CenterContainer" parent="CanvasLayer" unique_id=1364769837]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/LogoContainer" unique_id=742223998]
+layout_mode = 2
+
+[node name="Logo" type="Label" parent="CanvasLayer/LogoContainer/VBoxContainer" unique_id=804255548]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "BATTLEFRIENDS"
+
+[node name="Subtitle" type="Label" parent="CanvasLayer/LogoContainer/VBoxContainer" unique_id=302461902]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "2D Idle Autobattler"
+
+[node name="FadeRect" type="CanvasLayer" parent="." unique_id=1400246984]
+
+[node name="FadeOverlay" type="ColorRect" parent="FadeRect" unique_id=405142149]
+color = Color(0, 0, 0, 1)

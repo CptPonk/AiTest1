@@ -1,0 +1,194 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4lq0d5opkee"]
+
+[ext_resource type="Script" uid="uid://cotrcv0upc6ro" path="res://scripts/screens/MainMenu.gd" id="1_mainmenu"]
+
+[node name="MainMenu" type="Control" unique_id=799627725]
+layout_mode = 3
+anchors_fill_parent = true
+script = ExtResource("1_mainmenu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=497970774]
+
+[node name="VillageBackground" type="ColorRect" parent="CanvasLayer" unique_id=789803980]
+anchors_fill_parent = true
+color = Color(0.2, 0.3, 0.15, 1)
+
+[node name="GrassBase" type="ColorRect" parent="CanvasLayer" unique_id=234234980]
+anchors_fill_parent = true
+color = Color(0.3, 0.45, 0.2, 1)
+
+[node name="VillageMapLayer" type="Node2D" parent="CanvasLayer" unique_id=345345345]
+
+[node name="PathNorth" type="ColorRect" parent="CanvasLayer/VillageMapLayer" unique_id=445445445]
+anchor_left = 0.4
+anchor_top = 0.1
+anchor_right = 0.6
+anchor_bottom = 0.55
+color = Color(0.65, 0.55, 0.35, 1)
+
+[node name="PathWest" type="ColorRect" parent="CanvasLayer/VillageMapLayer" unique_id=545545545]
+anchor_left = 0.1
+anchor_top = 0.4
+anchor_right = 0.55
+anchor_bottom = 0.6
+color = Color(0.65, 0.55, 0.35, 1)
+
+[node name="PathEast" type="ColorRect" parent="CanvasLayer/VillageMapLayer" unique_id=645645645]
+anchor_left = 0.45
+anchor_top = 0.4
+anchor_right = 0.9
+anchor_bottom = 0.6
+color = Color(0.65, 0.55, 0.35, 1)
+
+[node name="CenterSquare" type="ColorRect" parent="CanvasLayer/VillageMapLayer" unique_id=745745745]
+anchor_left = 0.35
+anchor_top = 0.35
+anchor_right = 0.65
+anchor_bottom = 0.65
+color = Color(0.7, 0.6, 0.4, 1)
+
+[node name="WaterFeature" type="ColorRect" parent="CanvasLayer/VillageMapLayer" unique_id=845845845]
+anchor_left = 0.75
+anchor_top = 0.65
+anchor_right = 0.95
+anchor_bottom = 0.95
+color = Color(0.2, 0.4, 0.6, 1)
+
+[node name="ForestFeature" type="ColorRect" parent="CanvasLayer/VillageMapLayer" unique_id=945945945]
+anchor_left = 0.05
+anchor_top = 0.65
+anchor_right = 0.25
+anchor_bottom = 0.95
+color = Color(0.15, 0.35, 0.2, 1)
+
+[node name="BuildingsLayer" type="Node2D" parent="CanvasLayer" unique_id=1045045045]
+
+[node name="HomeBuilding" type="ColorRect" parent="CanvasLayer/BuildingsLayer" unique_id=1145145145]
+anchor_left = 0.15
+anchor_top = 0.2
+anchor_right = 0.35
+anchor_bottom = 0.38
+color = Color(0.8, 0.4, 0.2, 1)
+
+[node name="HomeBuildingRoof" type="ColorRect" parent="CanvasLayer/HomeBuilding" unique_id=2145145145]
+anchor_left = -0.1
+anchor_top = -0.15
+anchor_right = 1.1
+anchor_bottom = 0.0
+color = Color(0.6, 0.2, 0.1, 1)
+
+[node name="GachaBuilding" type="ColorRect" parent="CanvasLayer/BuildingsLayer" unique_id=1245245245]
+anchor_left = 0.65
+anchor_top = 0.15
+anchor_right = 0.85
+anchor_bottom = 0.35
+color = Color(0.7, 0.5, 0.8, 1)
+
+[node name="GachaRoof" type="ColorRect" parent="CanvasLayer/GachaBuilding" unique_id=2245245245]
+anchor_left = -0.1
+anchor_top = -0.15
+anchor_right = 1.1
+anchor_bottom = 0.0
+color = Color(0.5, 0.3, 0.6, 1)
+
+[node name="BattleGate" type="ColorRect" parent="CanvasLayer/BuildingsLayer" unique_id=1345345345]
+anchor_left = 0.4
+anchor_top = 0.65
+anchor_right = 0.6
+anchor_bottom = 0.85
+color = Color(0.5, 0.5, 0.5, 1)
+
+[node name="GateTop" type="ColorRect" parent="CanvasLayer/BattleGate" unique_id=2345345345]
+anchor_left = 0.1
+anchor_top = -0.2
+anchor_right = 0.9
+anchor_bottom = 0.0
+color = Color(0.3, 0.3, 0.3, 1)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=3445345345]
+
+[node name="ResourceDisplay" type="HBoxContainer" parent="HUD" unique_id=901065871]
+anchors_preset = 1
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -145.0
+offset_top = 10.0
+offset_right = 145.0
+offset_bottom = 60.0
+grow_horizontal = 2
+
+[node name="GoldLabel" type="Label" parent="HUD/ResourceDisplay" unique_id=1581600105]
+layout_mode = 2
+text = "⭐ Gold: 1000"
+theme_override_font_sizes/font_size = 16
+add_theme_color_override/font_color = Color.YELLOW
+
+[node name="GemsLabel" type="Label" parent="HUD/ResourceDisplay" unique_id=1288640705]
+layout_mode = 2
+text = "💎 Gems: 100"
+theme_override_font_sizes/font_size = 16
+add_theme_color_override/font_color = Color.CYAN
+
+[node name="TicketsLabel" type="Label" parent="HUD/ResourceDisplay" unique_id=1961051990]
+layout_mode = 2
+text = "🎫 Tickets: 10"
+theme_override_font_sizes/font_size = 16
+add_theme_color_override/font_color = Color.LIGHT_CORAL
+
+[node name="ButtonsLayer" type="CanvasLayer" parent="." unique_id=5545345345]
+
+[node name="HomeButton" type="Button" parent="ButtonsLayer" unique_id=620071997]
+anchor_left = 0.15
+anchor_top = 0.2
+anchor_right = 0.35
+anchor_bottom = 0.38
+custom_minimum_size = Vector2(150, 120)
+text = "🏠
+Hero
+Management"
+theme_override_font_sizes/font_size = 14
+
+[node name="GachaButton" type="Button" parent="ButtonsLayer" unique_id=1839205077]
+anchor_left = 0.65
+anchor_top = 0.15
+anchor_right = 0.85
+anchor_bottom = 0.35
+custom_minimum_size = Vector2(150, 120)
+text = "✨
+Hero
+Guild"
+theme_override_font_sizes/font_size = 14
+
+[node name="BattleButton" type="Button" parent="ButtonsLayer" unique_id=1845040981]
+anchor_left = 0.4
+anchor_top = 0.65
+anchor_right = 0.6
+anchor_bottom = 0.85
+custom_minimum_size = Vector2(150, 120)
+text = "⚔️
+Battle
+Gate"
+theme_override_font_sizes/font_size = 14
+
+[node name="TitleLayer" type="CanvasLayer" parent="." unique_id=6645345345]
+
+[node name="Title" type="Label" parent="TitleLayer" unique_id=8845345345]
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -150.0
+offset_top = -30.0
+offset_right = 150.0
+offset_bottom = 0.0
+text = "BATTLEFRIENDS VILLAGE"
+theme_override_font_sizes/font_size = 28
+alignment = 1
+
+[node name="FadeRect" type="CanvasLayer" parent="." unique_id=914504590]
+
+[node name="FadeOverlay" type="ColorRect" parent="FadeRect" unique_id=2112585918]
+anchors_fill_parent = true
+color = Color(0, 0, 0, 0)

@@ -1,0 +1,131 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3q8d5nz6x2p"]
+
+[ext_resource type="Script" path="res://scripts/screens/GachaScreen.gd" id="1_gacha"]
+
+[node name="GachaScreen" type="Control"]
+layout_mode = 3
+anchors_fill_parent = true
+script = ExtResource("1_gacha")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+layout_mode = 1
+anchors_fill_parent = true
+color = Color(0.15, 0.2, 0.35, 1)
+
+[node name="SkyGradient" type="ColorRect" parent="CanvasLayer"]
+anchors_fill_parent = true
+color = Color(0.2, 0.25, 0.4, 1)
+
+[node name="MysticalAura1" type="ColorRect" parent="CanvasLayer"]
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.35
+anchor_bottom = 0.35
+color = Color(0.5, 0.3, 0.8, 0.3)
+
+[node name="MysticalAura2" type="ColorRect" parent="CanvasLayer"]
+anchor_left = 0.65
+anchor_top = 0.15
+anchor_right = 0.9
+anchor_bottom = 0.4
+color = Color(0.8, 0.5, 0.3, 0.3)
+
+[node name="ShrineBase" type="ColorRect" parent="CanvasLayer"]
+anchor_left = 0.3
+anchor_top = 0.65
+anchor_right = 0.7
+anchor_bottom = 0.95
+color = Color(0.45, 0.35, 0.2, 1)
+
+[node name="ShrineRoof" type="ColorRect" parent="CanvasLayer"]
+anchor_left = 0.25
+anchor_top = 0.55
+anchor_right = 0.75
+anchor_bottom = 0.7
+color = Color(0.8, 0.6, 0.2, 1)
+
+[node name="EnergyParticles" type="ColorRect" parent="CanvasLayer"]
+anchor_left = 0.35
+anchor_top = 0.5
+anchor_right = 0.65
+anchor_bottom = 0.65
+color = Color(0.9, 0.7, 0.9, 0.2)
+
+[node name="TitleBar" type="HBoxContainer" parent="CanvasLayer"]
+layout_mode = 1
+anchors_left = 0.0
+anchors_top = 0.0
+anchors_right = 1.0
+anchors_bottom = 0.0
+offset_top = 10.0
+offset_bottom = 60.0
+
+[node name="BackButton" type="Button" parent="CanvasLayer/TitleBar"]
+layout_mode = 2
+text = "← Back"
+custom_minimum_size = Vector2(100, 40)
+
+[node name="Title" type="Label" parent="CanvasLayer/TitleBar"]
+layout_mode = 2
+text = "HERO GUILD"
+theme_override_font_sizes/font_size = 32
+
+[node name="MainContent" type="VBoxContainer" parent="CanvasLayer"]
+layout_mode = 1
+anchors_left = 0.0
+anchors_top = 0.0
+anchors_right = 1.0
+anchors_bottom = 1.0
+offset_top = 70.0
+offset_bottom = -10.0
+
+[node name="PityInfo" type="BoxContainer" parent="CanvasLayer/MainContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PityLabel1" type="Label" parent="CanvasLayer/MainContent/PityInfo"]
+layout_mode = 2
+text = "Rare Pity: 0/10"
+
+[node name="PityLabel2" type="Label" parent="CanvasLayer/MainContent/PityInfo"]
+layout_mode = 2
+text = "Legendary Pity: 0/50"
+
+[node name="PullPanel" type="PanelContainer" parent="CanvasLayer/MainContent"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PullVBox" type="VBoxContainer" parent="CanvasLayer/MainContent/PullPanel"]
+layout_mode = 2
+
+[node name="PullTitle" type="Label" parent="CanvasLayer/MainContent/PullPanel/PullVBox"]
+layout_mode = 2
+text = "Pull Heroes"
+theme_override_font_sizes/font_size = 24
+
+[node name="PullButtons" type="HBoxContainer" parent="CanvasLayer/MainContent/PullPanel/PullVBox"]
+layout_mode = 2
+
+[node name="SinglePullButton" type="Button" parent="CanvasLayer/MainContent/PullPanel/PullVBox/PullButtons"]
+layout_mode = 2
+text = "Single Pull (1 Ticket)"
+custom_minimum_size = Vector2(200, 50)
+
+[node name="TenPullButton" type="Button" parent="CanvasLayer/MainContent/PullPanel/PullVBox/PullButtons"]
+layout_mode = 2
+text = "10x Pull (10 Tickets)"
+custom_minimum_size = Vector2(200, 50)
+
+[node name="ResultsLabel" type="Label" parent="CanvasLayer/MainContent/PullPanel/PullVBox"]
+layout_mode = 2
+text = "Pull results will appear here"
+custom_minimum_size = Vector2(400, 100)
+
+[node name="FadeRect" type="CanvasLayer" parent="."]
+
+[node name="FadeOverlay" type="ColorRect" parent="FadeRect"]
+layout_mode = 1
+anchors_fill_parent = true
+color = Color(0, 0, 0, 0)
